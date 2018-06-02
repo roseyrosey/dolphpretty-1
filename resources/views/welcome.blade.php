@@ -13,7 +13,12 @@
                 </div>
             @endif
         </div> --}}
+         @include('widgets.slider')
 
+<!-- nos coiffeuses-->
+      @include('widgets.coiffeuses')
+
+        <!--// nos coiffeuses-->
      @include('widgets.testimonials')
      
       @include('widgets.blog')

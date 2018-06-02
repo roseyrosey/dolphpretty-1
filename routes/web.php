@@ -18,10 +18,13 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-// OAuth Routes
-Route::get('auth/{provider}', 'Auth\AuthController@redirectToProvider');
-Route::get('auth/{provider}/callback', 'Auth\AuthController@handleProviderCallback');
+// // OAuth Routes
+// Route::get('auth/{provider}', 'Auth\AuthController@redirectToProvider');
+// Route::get('auth/{provider}/callback', 'Auth\AuthController@handleProviderCallback');
 
 Route::get('/contact', function () {
        return view('contact.contact');
 });
+Route::resource('/profile', 'ProfilController');
+Route::resource('/prestataires', 'PrestatairesController');
+Route::resource('/services', 'ServicesController');

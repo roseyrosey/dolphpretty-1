@@ -17,20 +17,8 @@
                                 
                                 </div>
                                 <div class="col-sm-6 right">
-                                    
-                                    <div class="col-md-4 ">
-                                    <div class="heading">
-                                        
-                                    </div>
-                                </div>
-                                <div class="row text-center form-align ">
-
-                                <div class="col-md-4 ">
-                                    <div class="heading">
-                                        
-                                    </div>
-                                </div>
-
+                                 
+                              
                                  @guest
                                 <div class="col-md-8 col-md-offset-2">
                                  <form class="form-horizontal" method="POST" action="{{ route('register') }}">
@@ -141,7 +129,71 @@
                     </form>
                                     </div>
                                     @else
-                                    
+                                    <div class="row text-center form-align ">
+
+                               
+
+                                <div class="col-md-8 col-md-offset-2">
+                             <form>
+                
+                                <div class="row">
+                                
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <select class="form-control" name="coiffeuse">
+
+                                                <option value=""> Votre coiffure </option>
+                                                <option value="rasta"> Rasta </option>
+                                            <option value="passe meche"> passe meche</option>
+                                            <option value="chugnon"> chugnon </option>
+                                            <option value="greffe"> greffe</option>
+                                            </select>
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <select class="form-control" name="coiffeuse">
+                                                <option> Pays</option>
+                                            <option value="camerou "> Cameroun</option>
+                                            <option value="france"> France</option>
+                                            <option value="canada"> Canada</option>
+                                            <option value="cote d'ivoire"> Cote D'ivoire</option>
+                                            </select>
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" id="firstname" name="ville" placeholder="Ville">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" id="firstname" name="quartier" placeholder="Quartier">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <input type="date" class="form-control" id="firstname" name="prenom" placeholder="Date">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-12">
+                                        <div class="form-group">
+                                            <textarea id="message" class="form-control" name="desc" placeholder="Description"></textarea>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-12 text-center">
+                                        <button type="submit" class="btn btn-template-main"><i class="fa fa-location-arrow"></i> Envoyer</button>
+                                   </div>
+                                </div>
+                                
+                                <!-- /.row -->
+                            </form>
+
+                                  </div>
                                      @endguest
                                    </div>                                    
                                 </div>

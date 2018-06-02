@@ -58,7 +58,11 @@
 
                 @else
                     <div class="login">
-                  <span class="d-none d-md-inline-block">   {{ Auth::user()->name }}</span>
+                  <a href="{{route('profile.show',Auth::user()->id)}}">
+                  <span class="d-none d-md-inline-block">
+                     {{ Auth::user()->name }}
+                 </span>
+                  </a>
                <a href="{{ route('logout') }}"
                                             onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -163,13 +167,13 @@
       <!-- Navbar Start-->
       <header class="nav-holder make-sticky">
         <div id="navbar" role="navigation" class="navbar navbar-expand-lg">
-          <div class="container"><a href="{{ url('/')}}" class="navbar-brand home"><img src="img/logo.png" alt="Universal logo" class="d-none d-md-inline-block"><img src="img/logo-small.png" alt="Universal logo" class="d-inline-block d-md-none"><span class="sr-only">Universal - go to homepage</span></a>
+          <div class="container"><a href="{{ url('/')}}" class="navbar-brand home"><img src="{{ asset('img/logo.png')}}" alt="Universal logo" class="d-none d-md-inline-block"><img src="{{ asset('img/logo-small.png')}}" alt="Universal logo" class="d-inline-block d-md-none"><span class="sr-only">Universal - go to homepage</span></a>
             <button type="button" data-toggle="collapse" data-target="#navigation" class="navbar-toggler btn-template-outlined"><span class="sr-only">Toggle navigation</span><i class="fa fa-align-justify"></i></button>
             <div id="navigation" class="navbar-collapse collapse">
               <ul class="nav navbar-nav ml-auto">
                 <li class="nav-item dropdown active"><a href=" {{url('/')}} ">Accueil</a>
                 </li>
-                <li class="nav-item dropdown menu-large"><a href="#">Nos prestataires</a>
+                <li class="nav-item dropdown menu-large"><a href="{{route('prestataires.index')}}">Nos prestataires</a>
                 </li>
                 <li class="nav-item dropdown menu-large"><a href="#">PRETTY-SHOP </a>
                 </li>
@@ -192,14 +196,10 @@
         </div>
       </header>
       <!-- Navbar End-->
-       @include('widgets.slider')
-       
+      
         @yield('content')
 
-        <!-- nos coiffeuses------>
-      @include('widgets.coiffeuses')
-
-        <!--// nos coiffeuses-->
+        
     </div>
 
 
@@ -210,17 +210,7 @@
             <div class="col-lg-3">
               <h4 class="h6">About Us</h4>
               <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-              <hr>
-              <h4 class="h6">Join Our Monthly Newsletter</h4>
-              <form>
-                <div class="input-group">
-                  <input type="text" class="form-control">
-                  <div class="input-group-append">
-                    <button type="button" class="btn btn-secondary"><i class="fa fa-send"></i></button>
-                  </div>
-                </div>
-              </form>
-              <hr class="d-block d-lg-none">
+            <hr class="d-block d-lg-none">
             </div>
            
             <div class="col-md-3 col-sm-8">
